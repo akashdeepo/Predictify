@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Predictify</h1>
+            <p id="points" style="display: none;">Points: 100</p>
+            <p id="net-score" style="display: none;">Net Score: 100</p>
+        </header>
+        <main>
+            <div id="welcome-container">
+                <h2>Welcome to Predictify!</h2>
+                <p>Rules:</p>
+                <ul>
+                    <li>You start with 100 points.</li>
+                    <li>Each question has a 10-second timer.</li>
+                    <li>Use the slider to select your confidence level (1-10).</li>
+                    <li>Higher confidence levels increase your bet and potential win.</li>
+                    <li>If you answer correctly with high confidence, you fill the hype bar.</li>
+                    <li>When the hype bar is full, your next bet is guaranteed a 2.5x multiplier.</li>
+                    <li>If you don't answer within the time limit, the game is forfeited.</li>
+                </ul>
+                <button onclick="startGame()">Start Game</button>
+            </div>
+            <div id="hype-container" style="display: none;">
+                <div id="hype-bar"></div>
+            </div>
+            <div id="timer" style="display: none;">Time left: 10s</div>
+            <div id="question-container"></div>
+        </main>
+        <footer>
+            <p id="badge"></p>
+        </footer>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

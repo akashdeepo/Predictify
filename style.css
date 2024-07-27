@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+#welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome-container ul {
+    text-align: left;
+}
+
+#hype-container {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 20px;
+}
+
+#hype-bar {
+    background-color: #4CAF50;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s;
+}
+
+#timer {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.question {
+    margin: 15px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.win {
+    animation: win-animation 1s ease-in-out;
+}
+
+.lose {
+    animation: lose-animation 1s ease-in-out;
+}
+
+@keyframes win-animation {
+    0% { background-color: #fff; }
+    50% { background-color: #a8e6a2; }
+    100% { background-color: #fff; }
+}
+
+@keyframes lose-animation {
+    0% { background-color: #fff; }
+    50% { background-color: #f8a8a8; }
+    100% { background-color: #fff; }
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 15px 0;
+}
